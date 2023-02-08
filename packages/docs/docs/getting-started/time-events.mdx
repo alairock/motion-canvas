@@ -49,6 +49,15 @@ because correcting the first time event after the pause will also fix all events
 after it. You can hold `SHIFT` when editing an event to prevent this from
 happening.
 
+## Registering the event
+
+To use the "Time Events" feature in Motion Canvas, it's important to register your event with the scene using the following code:
+```ts
+useScene().timeEvents.register('event');
+```
+
+This line should be added before calling the waitUntil function.
+
 ## Controlling animation duration
 
 Aside from specifying _when_ something should happen, Time Events can also be used to 
